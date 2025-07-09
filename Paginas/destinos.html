@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/Estilos/estilos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <title>ModoViajero</title>
+  </head>
+  <body class="layout">
+    <header>
+      <nav class="navbar navbar-expand-sm bg-body-tertiary menu-navegacion">
+        <div class="container-fluid flex-row">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul
+              class="navbar-nav w-100 justify-content-around align-items-center"
+            >
+              <li class="nav-item dropdown">
+                <div class="dropdown" id="dropdown-style">
+                  <button
+                    class="btn dropdown-toggle"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Destinos
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Inglaterra</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Francia</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Países Bajos</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+
+              <div class="dropdown">
+                <button
+                  class="btn dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Guías
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Guía Londres</a></li>
+                  <li><a class="dropdown-item" href="#">Guía Francia</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Guía Amsterdam</a>
+                  </li>
+                </ul>
+              </div>
+              <a class="navbar-brand" href="../index.html"
+                ><img src="../Imagenes/logo - Editada.png" alt="logo" id="logo"
+              /></a>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  aria-current="page"
+                  href="../Paginas/arma-tu-viaje.html"
+                  >Armá tu viaje</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../Paginas/sobre-mi.html">Sobre Mí</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="main-destinos">
+      <section class="seccion-destinos">
+        <h2>¿Cuál es tu próximo destino?</h2>
+        <div class="lista-destinos">
+          <ul>
+            <li><a href="">Europa</a></li>
+            <li><a href="">Estados Unidos</a></li>
+            <li><a href="">América Central</a></li>
+            <li><a href="">América del Sur</a></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div>
+        <img src="../Imagenes/logo - Editada.png" alt="logo" id="logo-footer" />
+      </div>
+      <div class="footer-links">
+        <ul>
+          <li><a href="./contacto.html">Contacto</a></li>
+          <li><a href="">Instagram</a></li>
+          <li><a href="">LinkedIn</a></li>
+          <li><a href="./sobre-nosotros.html">Sobre Mi</a></li>
+          <li><a href="">Facebook</a></li>
+          <li><a href="">Términos y Condiciones</a></li>
+        </ul>
+      </div>
+    </footer>
+    <script src="../node_modules/bootstrap/dist/css/bootstrap.min.css"></script>
+  </body>
+</html>
