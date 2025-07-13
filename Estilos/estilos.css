@@ -34,8 +34,6 @@ header {
 
 #logo {
   max-width: 120px;
-  display: flex;
-  text-align: cen;
 }
 
 /** INDEX **/
@@ -161,7 +159,7 @@ main {
 }
 
 .presentacion {
- margin-bottom: 50px;
+  margin-bottom: 50px;
   margin-right: 220px;
   margin-left: 220px;
   font-family: "Lato", sans-serif;
