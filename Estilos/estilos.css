@@ -156,11 +156,9 @@ main {
 /* SOBRE MI */
 
 .bienvenida {
-  font-family: "Merriweather", sans-serif;
-  font-weight: 700;
+  font-family: "Lato", sans-serif;
+  font-weight: 800;
   color: #623f23;
-  padding-left: 410px;
-  padding-right: 410px;
   margin-top: 88px;
   margin-bottom: 15px;
   font-style: italic;
@@ -169,7 +167,7 @@ main {
 
 .presentacion {
   margin-bottom: 50px;
-  font-family: "Merriweather", sans-serif;
+  font-family: "Lato", sans-serif;
   color: #231f20;
   font-weight: 400;
   font-style: italic;
