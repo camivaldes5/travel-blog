@@ -155,36 +155,43 @@ main {
 
 /* SOBRE MI */
 
+.section__sobremi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
 .bienvenida {
-  font-family: "Merriweather", sans-serif;
-  font-weight: 700;
+  font-family: "Lato", sans-serif;
+  font-weight: 800;
+  font-size: 35px;
   color: #623f23;
-  padding-left: 410px;
-  padding-right: 410px;
   margin-top: 88px;
-  margin-bottom: 15px;
+  margin-bottom: 29px;
   font-style: italic;
   text-align: center;
 }
 
 .presentacion {
   margin-bottom: 50px;
-  font-family: "Merriweather", sans-serif;
+  margin-right: 220px;
+  margin-left: 220px;
+  font-family: "Lato", sans-serif;
   color: #231f20;
   font-weight: 400;
   font-style: italic;
   text-align: center;
-  margin-right: 70px;
-  margin-left: 70px;
-  font-size: medium;
+  font-size: 22px;
   line-height: 1.9;
 }
 
 #nombre {
   font-weight: 700;
-  color: #623f23;
-  font-family: "Merriweather", sans-serif;
-  font-size: 18px;
+  color: #231f20;
+  font-family: "Lato", sans-serif;
+  font-size: 23px;
   text-shadow: 0 0 12px #6d4d32;
 }
 
@@ -456,14 +463,14 @@ textarea {
 }
 
 .mi-foto {
+  display: grid;
   height: 150px;
   width: 150px;
   border-radius: 50%;
   margin-bottom: 30px;
-  margin-left: 612px;
   border-style: solid;
   border-color: #623f23;
-  text-align: center;
+  align-items: center;
 }
 
 #img-guia-londres {
