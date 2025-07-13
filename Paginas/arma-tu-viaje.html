@@ -24,7 +24,9 @@
   </head>
   <body class="layout">
     <header>
-      <nav class="navbar navbar-expand-sm bg-body-tertiary menu-navegacion" >
+      <nav
+        class="navbar navbar-expand-sm bg-body-tertiary menu-navegacion container-fluid"
+      >
         <div class="container-fluid flex-row">
           <button
             class="navbar-toggler"
@@ -34,46 +36,82 @@
             aria-controls="navbarNavDropdown"
             aria-expanded="false"
             aria-label="Toggle navigation"
-            >
+          >
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav w-100 justify-content-around align-items-center">
+            <ul
+              class="navbar-nav w-100 justify-content-around align-items-center"
+            >
               <li class="nav-item dropdown">
                 <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
+                  class="menu-navegacion dropdown-toggle"
+                  href="../Paginas/destinos.html"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
                 >
-                Destinos
-              </a>
+                  Destinos
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Inglaterra</a></li>
+                  <li><a class="dropdown-item" href="#">Francia</a></li>
+                  <li><a class="dropdown-item" href="#">Países Bajos</a></li>
+                  <li><a class="dropdown-item" href="#">España</a></li>
+                  <li><a class="dropdown-item" href="#">Italia</a></li>
+                  <li><a class="dropdown-item" href="#">Estados Unidos</a></li>
+                </ul>
+              </li>
+
               <li class="nav-item dropdown">
                 <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
+                  class="menu-navegacion dropdown-toggle"
+                  href="../Paginas/guias.html"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
                 >
-                Guías</a
+                  Guías</a
                 >
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="#">Guía Londres 5 días</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Guía París 5 días</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Guía Amsterdam 3 días</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Guía Barcelona 4 días</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Guía Costa Amalfitana 5 días</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Guía Nueva York 1 semana</a
+                    >
+                  </li>
+                </ul>
               </li>
               <a class="navbar-brand" href="../index.html"
-              ><img
-              src="../Imagenes/logo - Editada.png"
-              alt="logo"
-              id="logo"
+                ><img src="../Imagenes/logo - Editada.png" alt="logo" id="logo"
               /></a>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="../Paginas/arma-tu-viaje.html"
+                <a
+                  class="nav-link"
+                  aria-current="page"
+                  href="../Paginas/arma-tu-viaje.html"
                   >Armá tu viaje</a
                 >
               </li>
-                <li class="nav-item">
+              <li class="nav-item">
                 <a class="nav-link" href="../Paginas/sobre-mi.html">Sobre Mí</a>
-                </li>
+              </li>
             </ul>
           </div>
         </div>
@@ -81,6 +119,7 @@
     </header>
     <main>
       <section class="seccion-armar-tu-viaje">
+        <div>
         <h1>La info que necesitás, sin vueltas, para moverte por el mundo✈️ </h1>
         <p>
           En esta sección vas a encontrar todo lo necesario para armar tu viaje de principio a fin: elegir el destino, definir presupuesto, encontrar vuelos, hospedaje, armar tu itinerario y resolver los detalles que hacen la diferencia. <br />
@@ -88,8 +127,10 @@
           La idea es que tengas toda la información en un solo lugar, con claridad y estructura, para que viajar se sienta posible, real y cada vez más cerca.
         </p>
         <p>Guardá esta guía y volvé cuando lo necesites. Está hecha para acompañarte en cada paso. </p>
+        </div>
       </section>
       <section class="paso-uno">
+        <div>
         <h3>Paso 1: Elegí tu destino</h3>
         <p>El viaje empieza mucho antes de hacer la valija: empieza cuando imaginás a dónde querés ir.<br>
           Elegir el destino puede parecer lo más simple… o lo más abrumador si hay muchas opciones en mente. Por eso, armé esta guía con los puntos clave para ayudarte a tomar una decisión alineada a tu presupuesto, tus tiempos y el tipo de experiencia que buscás.</p>
@@ -127,7 +168,9 @@
               </ul>
               <p id="posdata"><strong>Recomendación:</strong> Si tenés flexibilidad de fechas, compará temporadas y elegí lo que más se adapte a tu estilo de viaje.</p>
             </div>
+            </div>
            </section>
+           </main>
     <footer>
       <div>
         <img src="../Imagenes/logo - Editada.png" alt="logo" id="logo-footer" />
