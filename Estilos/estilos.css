@@ -156,7 +156,7 @@ main {
 /* SOBRE MI */
 
 .bienvenida {
-  font-family: "Merriweather", sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 700;
   color: #623f23;
   padding-left: 410px;
@@ -169,23 +169,15 @@ main {
 
 .presentacion {
   margin-bottom: 50px;
-  font-family: "Merriweather", sans-serif;
+  margin-left: 230px;
+  margin-right: 230px;
+  font-family: "Lato", sans-serif;
   color: #231f20;
   font-weight: 400;
   font-style: italic;
   text-align: center;
-  margin-right: 70px;
-  margin-left: 70px;
-  font-size: medium;
+  font-size: 20px;
   line-height: 1.9;
-}
-
-#nombre {
-  font-weight: 700;
-  color: #623f23;
-  font-family: "Merriweather", sans-serif;
-  font-size: 18px;
-  text-shadow: 0 0 12px #6d4d32;
 }
 
 .formulario {
@@ -194,7 +186,7 @@ main {
     "label input"
     "label input";
   margin: 2rem auto;
-  height: 469px;
+  height: 540px;
   width: 650px;
   background-color: #4a8f6e65;
   border-radius: 20px;
@@ -223,13 +215,23 @@ main {
   margin-left: 20px;
 }
 
+#texto__mensaje {
+  position: relative;
+  top: -105px;
+}
+
 #mensaje {
   border-radius: 20px;
+  outline: none;
+  padding-left: 10px;
+  height: 120px;
 }
 
 .campo-form input {
   margin-top: 18px;
   outline: none;
+  padding-left: 10px;
+  text-align: center;
 }
 
 input,
