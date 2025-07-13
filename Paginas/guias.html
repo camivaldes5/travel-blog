@@ -24,14 +24,97 @@
   </head>
   <body class="layout">
     <header>
-      <nav class="menu-navegacion">
-        <ul>
-          <li><a href="./arma-tu-viaje.html">Armá tu Viaje</a></li>
-          <li><a href="./guias.html">Guías</a></li>
-          <li class="titulo"><a href="/index.html">Modo Viajero</a></li>
-          <li><a href="./destinos.html">Destinos</a></li>
-          <li><a href="./sobre-mi.html">Sobre Mí</a></li>
-        </ul>
+      <nav
+        class="navbar navbar-expand-sm bg-body-tertiary menu-navegacion container-fluid"
+      >
+        <div class="container-fluid flex-row">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul
+              class="navbar-nav w-100 justify-content-around align-items-center"
+            >
+              <li class="nav-item dropdown">
+                <a
+                  class="menu-navegacion dropdown-toggle"
+                  href="./destinos.html"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Destinos
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Inglaterra</a></li>
+                  <li><a class="dropdown-item" href="#">Francia</a></li>
+                  <li><a class="dropdown-item" href="#">Países Bajos</a></li>
+                  <li><a class="dropdown-item" href="#">España</a></li>
+                  <li><a class="dropdown-item" href="#">Italia</a></li>
+                  <li><a class="dropdown-item" href="#">Estados Unidos</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a
+                  class="menu-navegacion dropdown-toggle"
+                  href="./guias.html"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Guías</a
+                >
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="#">Guía Londres 5 días</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Guía París 5 días</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Guía Amsterdam 3 días</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Guía Barcelona 4 días</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Guía Costa Amalfitana 5 días</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Guía Nueva York 1 semana</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <a class="navbar-brand" href="../index.html"
+                ><img src="../Imagenes/logo - Editada.png" alt="logo" id="logo"
+              /></a>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  aria-current="page"
+                  href="./arma-tu-viaje.html"
+                  >Armá tu viaje</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./sobre-mi.html">Sobre Mí</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
     </header>
     <main>
