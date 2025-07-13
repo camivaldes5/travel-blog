@@ -161,7 +161,7 @@ main {
 }
 
 .presentacion {
-  margin-bottom: 50px;
+ margin-bottom: 50px;
   margin-right: 220px;
   margin-left: 220px;
   font-family: "Lato", sans-serif;
@@ -187,7 +187,7 @@ main {
     "label input"
     "label input";
   margin: 2rem auto;
-  height: 469px;
+  height: 540px;
   width: 650px;
   background-color: #4a8f6e65;
   border-radius: 20px;
@@ -216,13 +216,23 @@ main {
   margin-left: 20px;
 }
 
+#texto__mensaje {
+  position: relative;
+  top: -105px;
+}
+
 #mensaje {
   border-radius: 20px;
+  outline: none;
+  padding-left: 10px;
+  height: 120px;
 }
 
 .campo-form input {
   margin-top: 18px;
   outline: none;
+  padding-left: 10px;
+  text-align: center;
 }
 
 input,
