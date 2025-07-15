@@ -24,7 +24,9 @@
   </head>
   <body class="layout">
     <header>
-      <nav class="navbar navbar-expand-sm bg-body-tertiary menu-navegacion">
+      <nav
+        class="navbar navbar-expand-sm bg-body-tertiary menu-navegacion container-fluid"
+      >
         <div class="container-fluid flex-row">
           <button
             class="navbar-toggler"
@@ -42,44 +44,60 @@
               class="navbar-nav w-100 justify-content-around align-items-center"
             >
               <li class="nav-item dropdown">
-                <div class="dropdown" id="dropdown-style">
-                  <button
-                    class="btn dropdown-toggle"
-                    type="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Destinos
-                  </button>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Inglaterra</a></li>
-                    <li>
-                      <a class="dropdown-item" href="#">Francia</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#">Países Bajos</a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-
-              <div class="dropdown">
-                <button
-                  class="btn dropdown-toggle"
-                  type="button"
+                <a
+                  class="menu-navegacion dropdown-toggle"
+                  href="./destinos.html"
+                  role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Guías
-                </button>
+                  Destinos
+                </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Guía Londres</a></li>
-                  <li><a class="dropdown-item" href="#">Guía Francia</a></li>
+                  <li><a class="dropdown-item" href="#">Inglaterra</a></li>
+                  <li><a class="dropdown-item" href="#">Francia</a></li>
+                  <li><a class="dropdown-item" href="#">Países Bajos</a></li>
+                  <li><a class="dropdown-item" href="#">España</a></li>
+                  <li><a class="dropdown-item" href="#">Italia</a></li>
+                  <li><a class="dropdown-item" href="#">Estados Unidos</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a
+                  class="menu-navegacion dropdown-toggle"
+                  href="./guias.html"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Guías</a
+                >
+                <ul class="dropdown-menu">
                   <li>
-                    <a class="dropdown-item" href="#">Guía Amsterdam</a>
+                    <a class="dropdown-item" href="#">Guía Londres 5 días</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Guía París 5 días</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Guía Amsterdam 3 días</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Guía Barcelona 4 días</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Guía Costa Amalfitana 5 días</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Guía Nueva York 1 semana</a
+                    >
                   </li>
                 </ul>
-              </div>
+              </li>
               <a class="navbar-brand" href="../index.html"
                 ><img src="../Imagenes/logo - Editada.png" alt="logo" id="logo"
               /></a>
@@ -87,12 +105,12 @@
                 <a
                   class="nav-link"
                   aria-current="page"
-                  href="../Paginas/arma-tu-viaje.html"
+                  href="./arma-tu-viaje.html"
                   >Armá tu viaje</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="../Paginas/sobre-mi.html">Sobre Mí</a>
+                <a class="nav-link" href="./sobre-mi.html">Sobre Mí</a>
               </li>
             </ul>
           </div>
