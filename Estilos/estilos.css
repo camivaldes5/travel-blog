@@ -48,7 +48,6 @@ header {
 main {
   grid-area: main;
   background-color: #f7f8ea;
-  padding-bottom: 73px;
 }
 
 #videoFondo {
@@ -279,28 +278,54 @@ textarea {
   font-style: italic;
 }
 
-/* GUÍAS 
-*/
+/* GUÍAS */
+
+.seccion-guias {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
 .seccion-guias h1 {
+  display: grid;
   font-family: "Lato", sans-serif;
   margin-top: 4rem;
-  margin-left: 7rem;
-  font-weight: 800;
-  font-size: 1.6rem;
+  margin-right: 7rem;
+  font-weight: 780;
+  font-size: 35px;
   font-style: italic;
   color: #623f23;
+  justify-items: end;
 }
 
 .seccion-guias p {
   font-family: "Lato", sans-serif;
   margin-top: 1rem;
-  margin-left: 7rem;
+  margin-left: 15rem;
   margin-right: 7rem;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 18px;
   font-style: italic;
-  color: #623f23;
+  color: #231f20;
   line-height: 1.5;
+  text-align: end;
+  max-height: 220px;
+}
+
+.desplegable-guias {
+  margin-top: 40px;
+  margin-bottom: 80px;
+}
+
+.accordion-item .accordion-header .accordion-button {
+  font-family: "Lato", sans-serif;
+  color: #623f23;
+  font-size: 18px;
+  font-weight: 400 !important;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #d8f0e4a9 !important;
+  border: none;
 }
 
 .titulo-guias ul {
@@ -461,7 +486,7 @@ textarea {
   height: 150px;
   width: 150px;
   border-radius: 50%;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   margin-left: 612px;
   border-style: solid;
   border-color: #623f23;
@@ -532,5 +557,41 @@ footer {
 
 /* MEDIA QUERIES TAMAÑO CELULAR*/
 
-@media (max-width: 575px) {
+@media (max-width: 1269px) {
+  .seccion-guias h1 {
+    margin-right: 7rem;
+    font-size: 2rem;
+  }
+  .seccion-guias p {
+    margin-left: 15rem;
+    margin-right: 7rem;
+    font-size: 1rem;
+    max-height: 220px;
+  }
+}
+
+@media (max-width: 1105px) {
+  .seccion-guias h1 {
+    margin-right: 7rem;
+    font-size: 2rem;
+  }
+  .seccion-guias p {
+    margin-left: 8rem;
+    margin-right: 7rem;
+    font-size: 1rem;
+    max-height: 220px;
+  }
+}
+
+@media (max-width: 847px) {
+  .seccion-guias h1 {
+    margin-right: 1rem;
+    font-size: 2rem;
+  }
+  .seccion-guias p {
+    margin-left: 3rem;
+    margin-right: 1rem;
+    font-size: 1rem;
+    max-height: 220px;
+  }
 }
