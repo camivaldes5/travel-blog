@@ -38,7 +38,7 @@ header {
 
 /** INDEX **/
 
-main {
+.main {
   grid-area: main;
   background-color: #f7f8ea;
 }
