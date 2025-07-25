@@ -54,7 +54,6 @@ header {
 
 .layout {
   background-color: #fefdfb;
-  display: grid;
   grid-template-areas: "header header" "main main" "footer footer";
   min-height: 100vh;
 }
@@ -517,7 +516,10 @@ textarea {
 /** FOOTER **/
 footer {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)) !important;
+  background-color: rgba(
+    var(--bs-tertiary-bg-rgb),
+    var(--bs-bg-opacity)
+  ) !important;
   height: 150px;
   grid-area: footer;
   position: relative;
