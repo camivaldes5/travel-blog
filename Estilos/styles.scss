@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -6,6 +5,7 @@
 }
 
 /** MENU **/
+
 header {
   grid-area: header;
 }
@@ -37,7 +37,8 @@ header {
 }
 
 /** INDEX **/
-.main {
+
+main {
   grid-area: main;
   background-color: #f7f8ea;
 }
@@ -55,7 +56,10 @@ header {
 .layout {
   background-color: #fefdfb;
   display: grid;
-  grid-template-areas: "header header" "main main" "footer footer";
+  grid-template-areas:
+    "header header"
+    "main main"
+    "footer footer";
   min-height: 100vh;
 }
 
@@ -143,6 +147,7 @@ header {
 }
 
 /* SOBRE MI */
+
 .section__sobremi {
   display: flex;
   flex-direction: column;
@@ -184,11 +189,13 @@ header {
 
 .formulario {
   display: grid;
-  grid-template-areas: "label input" "label input";
+  grid-template-areas:
+    "label input"
+    "label input";
   margin: 2rem auto;
   height: 540px;
   width: 650px;
-  background-color: rgba(74, 143, 110, 0.3960784314);
+  background-color: #4a8f6e65;
   border-radius: 20px;
   font-family: "Merriweather", sans-serif;
   font-style: normal;
@@ -246,8 +253,8 @@ textarea {
 .boton button {
   margin-top: 12px;
   margin-left: 464px;
-  background-color: rgba(74, 143, 110, 0.6901960784);
-  border-color: rgba(98, 63, 35, 0.8274509804);
+  background-color: #4a8f6eb0;
+  border-color: #623f23d3;
   border-radius: 15px;
   border-style: bold;
   height: 40px;
@@ -255,42 +262,52 @@ textarea {
 }
 
 /* DESTINOS */
-.seccion-destinos h2 {
-  display: flex;
-  justify-content: center;
-  font-family: "Lato", sans-serif;
-  margin-top: 50px;
-  margin-bottom: 33px;
-  font-weight: 800;
-  font-style: italic;
-  color: #623f23;
-}
-.seccion-destinos div {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 60% 60%;
-  margin-bottom: 50px;
-  justify-items: center;
-  align-items: center;
-}
-.seccion-destinos img {
-  margin: 20px 0px;
-  width: 75%;
-  height: 70%;
-  border-radius: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-.seccion-destinos .lista-destinos li a {
-  font-family: "Lato", sans-serif;
-  font-weight: 800;
-  color: #623f23;
-  text-decoration: none;
-  font-style: italic;
-}
 
+.seccion-destinos {
+  h2 {
+    display: flex;
+    justify-content: center;
+    font-family: "Lato", sans-serif;
+    margin-top: 50px;
+    margin-bottom: 33px;
+    font-weight: 800;
+    font-style: italic;
+    color: #623f23;
+  }
+
+  div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 60% 60%;
+    margin-bottom: 50px;
+    justify-items: center;
+    align-items: center;
+  }
+
+  img {
+    margin: 20px 0px;
+    width: 75%;
+    height: 70%;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .lista-destinos {
+    li {
+      a {
+        font-family: "Lato", sans-serif;
+        font-weight: 800;
+        color: #623f23;
+        text-decoration: none;
+        font-style: italic;
+      }
+    }
+  }
+}
 /* GUÍAS */
+
 .seccion-guias {
   display: grid;
   grid-template-columns: 1fr;
@@ -335,7 +352,7 @@ textarea {
 }
 
 .accordion-button:not(.collapsed) {
-  background-color: rgba(216, 240, 228, 0.662745098) !important;
+  background-color: #d8f0e4a9 !important;
   border: none;
 }
 
@@ -366,6 +383,7 @@ textarea {
 }
 
 /* ARMA TU VIAJE */
+
 .seccion-armar-tu-viaje h1 {
   font-family: "Lato", sans-serif;
   margin-top: 4rem;
@@ -475,6 +493,7 @@ textarea {
 }
 
 /** IMAGENES **/
+
 .inglaterra {
   margin-bottom: 3rem;
 }
@@ -517,7 +536,10 @@ textarea {
 /** FOOTER **/
 footer {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)) !important;
+  background-color: rgba(
+    var(--bs-tertiary-bg-rgb),
+    var(--bs-bg-opacity)
+  ) !important;
   height: 150px;
   grid-area: footer;
   position: relative;
@@ -566,6 +588,7 @@ footer {
 }
 
 /* MEDIA QUERIES TAMAÑO CELULAR*/
+
 @media (max-width: 1269px) {
   .seccion-guias h1 {
     margin-right: 7rem;
@@ -578,6 +601,7 @@ footer {
     max-height: 220px;
   }
 }
+
 @media (max-width: 1105px) {
   .seccion-guias h1 {
     margin-right: 7rem;
@@ -590,6 +614,7 @@ footer {
     max-height: 220px;
   }
 }
+
 @media (max-width: 847px) {
   .seccion-guias h1 {
     margin-right: 1rem;
@@ -602,5 +627,3 @@ footer {
     max-height: 220px;
   }
 }
-
-/*# sourceMappingURL=estilos.css.map */
