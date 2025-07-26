@@ -55,11 +55,24 @@ main {
 .layout {
   background-color: #fefdfb;
   display: grid;
+  grid-template-rows: auto 1fr auto;
   grid-template-areas:
     "header"
-    "main "
-    "footer ";
+    "main"
+    "footer";
   min-height: 100vh;
+}
+
+header {
+  grid-area: header;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
 }
 
 .destacados {
@@ -267,44 +280,76 @@ textarea {
     display: flex;
     justify-content: center;
     font-family: "Lato", sans-serif;
-    margin-top: 50px;
-    margin-bottom: 33px;
+    margin: 85px 0px;
     font-weight: 800;
     font-style: italic;
+    color: #623f23;
+  }
+
+  h3 {
+    display: flex;
+    justify-content: center;
+    font-family: "Lato", sans-serif;
+    margin-bottom: 33px;
+    padding: 0px 45px;
+    font-weight: 800;
+    font-size: 45px;
     color: #623f23;
   }
 
   div {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 60% 60%;
+    grid-auto-rows: auto;
     margin-bottom: 50px;
     justify-items: center;
     align-items: center;
   }
 
   img {
-    margin: 20px 0px;
-    width: 75%;
-    height: 70%;
+    margin: 12px 0px;
+    width: 73%;
+    height: auto;
     border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     object-fit: cover;
     transition: transform 0.3s ease;
   }
-
-  .lista-destinos {
-    li {
-      a {
-        font-family: "Lato", sans-serif;
-        font-weight: 800;
-        color: #623f23;
-        text-decoration: none;
-        font-style: italic;
-      }
-    }
-  }
 }
+
+#img-destino {
+  height: 380px !important;
+  width: 100% !important;
+  object-fit: cover !important;
+  object-position: center 42% !important;
+}
+
+.titulo-separador {
+  align-items: center;
+  text-align: center;
+  letter-spacing: 1px;
+  margin: 40px 0;
+}
+
+.titulo-separador::before,
+.titulo-separador::after {
+  content: "";
+  height: 2px;
+  flex: 1;
+  margin: 0 15px;
+  opacity: 0.5;
+}
+
+/* Línea izquierda: menos desvanecimiento hacia la izquierda */
+.titulo-separador::before {
+  background: linear-gradient(to left, #623f23 60%, transparent 100%);
+}
+
+/* Línea derecha: menos desvanecimiento hacia la derecha */
+.titulo-separador::after {
+  background: linear-gradient(to right, #623f23 60%, transparent 100%);
+}
+
 /* GUÍAS */
 
 .seccion-guias {
