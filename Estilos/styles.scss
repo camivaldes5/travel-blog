@@ -5,7 +5,6 @@
 }
 
 /** MENU **/
-
 header {
   grid-area: header;
 }
@@ -37,7 +36,6 @@ header {
 }
 
 /** INDEX **/
-
 main {
   background-color: #f7f8ea;
 }
@@ -45,21 +43,18 @@ main {
 #videoFondo {
   top: 0;
   left: 0;
-  height: 330px;
+  height: 380px;
   width: 100%;
   object-fit: cover;
   z-index: -1;
-  object-position: center 62%;
+  object-position: center 60%;
 }
 
 .layout {
   background-color: #fefdfb;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  grid-template-areas:
-    "header"
-    "main"
-    "footer";
+  grid-template-areas: "header" "main" "footer";
   min-height: 100vh;
 }
 
@@ -77,17 +72,17 @@ footer {
 
 .destacados {
   display: grid;
-  grid-template-columns: 3fr 4fr;
-  padding: 50px 0px;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .titulo-index {
   margin-top: 35px;
   margin-bottom: 20px;
-  font-family: "Playfair Display", serif;
+  font-family: "Lato", sans-serif;
   color: #623f23;
   font-weight: 800;
-  font-size: 65px;
+  font-size: 70px;
+  font-style: italic;
   display: grid;
   justify-items: center;
   align-items: center;
@@ -95,21 +90,21 @@ footer {
 }
 
 .parrafo-destacados {
-  font-family: "Playfair Display", serif;
+  font-family: "Lato", sans-serif;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 18px;
+  font-style: italic;
   padding: 0px 18px;
   display: grid;
   justify-items: center;
   align-items: center;
   text-align: center;
-  color: #231f20;
-  line-height: 1.9;
+  color: #623f23;
+  line-height: 1.5;
 }
 
 .carousel-inner {
   grid-template-columns: 1fr 1fr;
-  justify-content: center;
 }
 
 .carousel-item {
@@ -117,7 +112,8 @@ footer {
 }
 
 .carousel-item img {
-  height: 100%;
+  margin-top: 35px;
+  height: calc(100% - 60px);
   width: 100%;
   border-radius: 83px;
   object-fit: cover;
@@ -129,119 +125,81 @@ footer {
   top: 20px;
 }
 
-.introduccion-sobre-mi {
-  display: grid;
-  grid-template-columns: 2fr 4fr;
-  gap: 10px;
-  background-color: #b6cbbdd2;
-  justify-items: end;
-  align-items: center;
-  padding: 20px;
-  flex-wrap: wrap;
-
-  .foto-introduccion {
-    max-width: 75%;
-    height: 95%;
-    border-radius: 30px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
-    object-fit: cover;
-    transition: transform 0.3s ease-in-out;
-  }
-
-  strong {
-    font-size: 26px;
-    color: #623f23;
-  }
-
-  p {
-    font-family: "Playfair Display", serif;
-    font-weight: 500;
-    font-size: 16px;
-    padding: 0px 77px;
-    text-align: center;
-    color: #231f20;
-    line-height: 1.9;
-    max-width: 100%;
-    overflow-wrap: break-word;
-  }
+.texto-superpuesto {
+  position: absolute;
+  top: 52%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  color: rgba(240, 248, 255, 0.801);
+  font-family: "Lato", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.7rem;
+  opacity: 0; /* 🔒 Oculto al inicio */
+  transition: opacity 0.3s ease;
+  pointer-events: none; /* evita que el texto bloquee el hover */
+  text-align: center;
+  z-index: 1;
 }
 
-// .texto-superpuesto {
-//   position: absolute;
-//   top: 52%;
-//   left: 30%;
-//   transform: translate(-50%, -50%);
-//   color: rgba(240, 248, 255, 0.801);
-//   font-family: "Lato", sans-serif;
-//   font-style: italic;
-//   font-weight: 400;
-//   font-size: 1.7rem;
-//   opacity: 0; /* 🔒 Oculto al inicio */
-//   transition: opacity 0.3s ease;
-//   pointer-events: none; /* evita que el texto bloquee el hover */
-//   text-align: center;
-//   z-index: 1;
-// }
+.contenedor-imagen:hover .texto-superpuesto {
+  opacity: 1;
+}
 
-// .contenedor-imagen:hover .texto-superpuesto {
-//   opacity: 1;
-// }
-
-// .contenedor-imagen:hover .img-destacados {
-//   filter: brightness(30%);
-//   height: 190px;
-//   width: 330px;
-//   text-shadow: 0 0 8px #231f20;
-// }
+.contenedor-imagen:hover .img-destacados {
+  filter: brightness(30%);
+  height: 190px;
+  width: 330px;
+  text-shadow: 0 0 8px #231f20;
+}
 
 /* SOBRE MI */
-
 .section__sobremi {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0px 20px 0px 20px;
+  text-align: center;
 }
 
 .bienvenida {
-  font-family: "Playfair Display", serif;
+  font-family: "Lato", sans-serif;
   font-weight: 800;
   color: #623f23;
   margin-top: 88px;
   margin-bottom: 29px;
+  font-style: italic;
   text-align: center;
 }
 
 .presentacion {
   margin-bottom: 50px;
-  margin-right: 100px;
-  margin-left: 100px;
-  font-family: "Playfair Display", serif;
+  margin-right: 220px;
+  margin-left: 220px;
+  font-family: "Lato", sans-serif;
   color: #231f20;
   font-weight: 400;
+  font-style: italic;
   text-align: center;
-  font-size: 20px;
+  font-size: medium;
   line-height: 1.9;
 }
 
 #nombre {
-  font-weight: 600;
-  color: #231f20;
-  font-family: "Playfair Display", serif;
-  font-size: 20px;
-  text-shadow: 0 0 12px #231f206b;
+  font-weight: 700;
+  color: #623f23;
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  text-shadow: 0 0 12px #6d4d32;
 }
 
 .formulario {
   display: grid;
-  grid-template-areas:
-    "label input"
-    "label input";
+  grid-template-areas: "label input" "label input";
   margin: 2rem auto;
   height: 540px;
   width: 650px;
-  background-color: #4a8f6e65;
+  background-color: rgba(74, 143, 110, 0.3960784314);
   border-radius: 20px;
   font-family: "Merriweather", sans-serif;
   font-style: normal;
@@ -299,8 +257,8 @@ textarea {
 .boton button {
   margin-top: 12px;
   margin-left: 464px;
-  background-color: #4a8f6eb0;
-  border-color: #623f23d3;
+  background-color: rgba(74, 143, 110, 0.6901960784);
+  border-color: rgba(98, 63, 35, 0.8274509804);
   border-radius: 15px;
   border-style: bold;
   height: 40px;
@@ -308,51 +266,45 @@ textarea {
 }
 
 /* DESTINOS */
-
-.seccion-destinos {
-  h2 {
-    display: flex;
-    justify-content: center;
-    font-family: "Lato", sans-serif;
-    margin: 60px 0px;
-    font-weight: 800;
-    font-style: italic;
-    color: #623f23;
-  }
-
-  h3 {
-    display: flex;
-    justify-content: center;
-    font-family: "Lato", sans-serif;
-    margin-bottom: 33px;
-    padding: 0px 45px;
-    font-weight: 800;
-    font-size: 45px;
-    color: #623f23;
-  }
-
-  div {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: auto;
-    margin-bottom: 50px;
-    justify-items: center;
-    align-items: center;
-  }
-
-  img {
-    margin: 12px 0px;
-    width: 73%;
-    height: auto;
-    border-radius: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    object-fit: cover;
-    transition: transform 0.3s ease;
-  }
+.seccion-destinos h2 {
+  display: flex;
+  justify-content: center;
+  font-family: "Lato", sans-serif;
+  margin: 85px 0px;
+  font-weight: 800;
+  font-style: italic;
+  color: #623f23;
+}
+.seccion-destinos h3 {
+  display: flex;
+  justify-content: center;
+  font-family: "Lato", sans-serif;
+  margin-bottom: 33px;
+  padding: 0px 45px;
+  font-weight: 800;
+  font-size: 45px;
+  color: #623f23;
+}
+.seccion-destinos div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+  margin-bottom: 50px;
+  justify-items: center;
+  align-items: center;
+}
+.seccion-destinos img {
+  margin: 12px 0px;
+  width: 73%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
 #img-destino {
-  height: 330px !important;
+  height: 380px !important;
   width: 100% !important;
   object-fit: cover !important;
   object-position: center 42% !important;
@@ -385,29 +337,35 @@ textarea {
 }
 
 /* GUÍAS */
-
 .seccion-guias {
   display: grid;
-  justify-items: center;
-  margin: 0px 60px 0px 60px;
+  grid-template-columns: 1fr;
 }
 
 .seccion-guias h1 {
   display: grid;
-  font-family: "Playfair Display", serif;
+  font-family: "Lato", sans-serif;
   margin-top: 4rem;
+  margin-right: 7rem;
   font-weight: 780;
   font-size: 35px;
+  font-style: italic;
   color: #623f23;
+  justify-items: end;
 }
 
 .seccion-guias p {
-  font-family: "Playfair Display", serif;
+  font-family: "Lato", sans-serif;
   margin-top: 1rem;
+  margin-left: 15rem;
+  margin-right: 7rem;
   font-weight: 400;
   font-size: 18px;
+  font-style: italic;
   color: #231f20;
-  text-align: center;
+  line-height: 1.5;
+  text-align: end;
+  max-height: 220px;
 }
 
 .desplegable-guias {
@@ -416,14 +374,14 @@ textarea {
 }
 
 .accordion-item .accordion-header .accordion-button {
-  font-family: "Playfair Display", serif;
+  font-family: "Lato", sans-serif;
   color: #623f23;
   font-size: 18px;
   font-weight: 400 !important;
 }
 
 .accordion-button:not(.collapsed) {
-  background-color: #d8f0e4a9 !important;
+  background-color: rgba(216, 240, 228, 0.662745098) !important;
   border: none;
 }
 
@@ -445,22 +403,21 @@ textarea {
 }
 
 .titulo-guias ul li a {
-  font-family: "Playfair Display", serif;
+  font-family: "Lato", sans-serif;
   font-weight: 700;
   font-size: 2rem;
+  font-style: italic;
   color: #623f23;
   text-decoration: none;
 }
 
 /* ARMA TU VIAJE */
-
 .seccion-armar-tu-viaje h1 {
   font-family: "Lato", sans-serif;
   margin-top: 4rem;
   margin-left: 7rem;
-  margin-right: 3rem;
   font-weight: 800;
-  font-size: 32px;
+  font-size: 35px;
   font-style: italic;
   color: #623f23;
 }
@@ -564,7 +521,6 @@ textarea {
 }
 
 /** IMAGENES **/
-
 .inglaterra {
   margin-bottom: 3rem;
 }
@@ -581,9 +537,17 @@ textarea {
   margin-bottom: 3rem;
 }
 
+.section__sobremi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
 .mi-foto {
-  height: 20%;
-  width: 20%;
+  height: 150px;
+  width: 150px;
   border-radius: 50%;
   border-style: solid;
   border-color: #623f23;
@@ -599,7 +563,7 @@ textarea {
 /** FOOTER **/
 .footer {
   display: grid;
-  grid-template-columns: auto 90px;
+  grid-template-columns: auto 130px;
   background-color: rgba(var(--bs-tertiary-bg-rgb), 1);
   padding: 30px 40px;
 }
@@ -623,11 +587,10 @@ textarea {
   font-size: 13px;
   text-decoration: none;
   transition: transform 0.3s ease;
-
-  &:hover {
-    transform: scale(1.1);
-    text-decoration: underline;
-  }
+}
+.footer-links a:hover {
+  transform: scale(1.1);
+  text-decoration: underline;
 }
 
 #logo-footer {
@@ -636,12 +599,11 @@ textarea {
   position: relative;
   top: 36px;
   right: 19px;
-
-  img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-  }
+}
+#logo-footer img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 @media (max-width: 768px) {
@@ -649,846 +611,50 @@ textarea {
     flex-direction: column;
     align-items: center;
   }
-
   .footer-links ul {
     grid-template-columns: repeat(2, auto);
     gap: 15px 40px;
   }
-
   #logo-footer {
     justify-content: center;
     max-width: 100px;
     margin-top: 20px;
   }
 }
-/* MEDIA QUERIES*/
-
-/* Sección Index */
-
-@media (max-width: 1075px) {
-  .destacados {
-    display: grid;
-    grid-template-columns: 3fr 4fr;
-    padding: 50px 0px;
-  }
-
-  .titulo-index {
-    margin-top: 35px;
-    margin-bottom: 20px;
-    font-family: "Playfair Display", serif;
-    color: #623f23;
-    font-weight: 800;
-    font-size: 50px;
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    line-height: 1;
-  }
-
-  .parrafo-destacados {
-    font-family: "Playfair Display", serif;
-    font-weight: 500;
-    font-size: 14px;
-    padding: 0px 18px;
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    text-align: center;
-    color: #231f20;
-    line-height: 1.9;
-  }
-
-  .introduccion-sobre-mi {
-    grid-template-columns: 3fr 4fr;
-
-    .foto-introduccion {
-      max-width: 80%;
-      height: 90%;
-    }
-    strong {
-      font-size: 25px;
-    }
-
-    p {
-      font-size: 16px;
-      padding: 0px 50px;
-    }
-  }
-}
-
-@media (max-width: 929px) {
-  .destacados {
-    display: grid;
-    grid-template-columns: 3fr 4fr;
-    padding: 50px 0px;
-  }
-
-  .titulo-index {
-    margin-top: 35px;
-    margin-bottom: 20px;
-    font-family: "Playfair Display", serif;
-    color: #623f23;
-    font-weight: 800;
-    font-size: 45px;
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    line-height: 1;
-  }
-
-  .parrafo-destacados {
-    font-family: "Playfair Display", serif;
-    font-weight: 500;
-    font-size: 13px;
-    padding: 0px 18px;
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    text-align: center;
-    color: #231f20;
-    line-height: 1.9;
-  }
-
-  .carousel-inner {
-    grid-template-columns: 1fr 1fr;
-    justify-content: center;
-  }
-
-  .carousel-item {
-    height: 320px;
-  }
-
-  .carousel-item img {
-    height: 90%;
-    width: 100%;
-    border-radius: 83px;
-    object-fit: cover;
-  }
-
-  .introduccion-sobre-mi {
-    grid-template-columns: 3fr 4fr;
-
-    .foto-introduccion {
-      max-width: 90%;
-      height: 90%;
-    }
-    strong {
-      font-size: 23px;
-    }
-
-    p {
-      font-size: 14px;
-      padding: 0px 30px;
-    }
-  }
-}
-
-@media (max-width: 814px) {
-  .destacados {
-    display: grid;
-    grid-template-columns: 3fr 4fr;
-    padding: 50px 0px;
-  }
-
-  .titulo-index {
-    margin-top: 35px;
-    margin-bottom: 20px;
-    font-family: "Playfair Display", serif;
-    color: #623f23;
-    font-weight: 800;
-    font-size: 40px;
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    line-height: 1;
-  }
-
-  .parrafo-destacados {
-    font-family: "Playfair Display", serif;
-    font-weight: 500;
-    font-size: 12px;
-    padding: 0px 18px;
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    text-align: center;
-    color: #231f20;
-    line-height: 1.9;
-  }
-
-  .carousel-inner {
-    grid-template-columns: 1fr 1fr;
-    justify-content: center;
-  }
-
-  .carousel-item {
-    height: 320px;
-  }
-
-  .carousel-item img {
-    height: 80%;
-    width: 100%;
-    border-radius: 83px;
-    object-fit: cover;
-  }
-  .introduccion-sobre-mi {
-    grid-template-columns: 1fr 2fr;
-
-    .foto-introduccion {
-      max-width: 90%;
-      height: 90%;
-    }
-    strong {
-      font-size: 21px;
-    }
-
-    p {
-      font-size: 12px;
-      padding: 0px 20px;
-    }
-  }
-}
-
-/* INDEX MOBILE */
-
-@media (max-width: 686px) {
-  .destacados {
-    display: grid;
-    grid-template-columns: 3fr 4fr;
-    padding: 50px 10px;
-  }
-
-  .titulo-index {
-    margin-top: 35px;
-    margin-bottom: 20px;
-    font-family: "Playfair Display", serif;
-    color: #623f23;
-    font-weight: 800;
-    font-size: 35px;
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    line-height: 1;
-  }
-
-  .parrafo-destacados {
-    font-family: "Playfair Display", serif;
-    font-weight: 500;
-    font-size: 11px;
-    padding: 0px 18px;
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    text-align: center;
-    color: #231f20;
-    line-height: 1.9;
-  }
-
-  .carousel-inner {
-    grid-template-columns: 1fr 1fr;
-    justify-items: center;
-  }
-
-  .carousel-item {
-    height: 320px;
-  }
-
-  .carousel-item img {
-    height: 65%;
-    width: 100%;
-    border-radius: 83px;
-    object-fit: cover;
-  }
-
-  .introduccion-sobre-mi {
-    grid-template-columns: 3fr 4fr;
-    justify-items: center;
-
-    .foto-introduccion {
-      max-width: 90%;
-      height: 87%;
-    }
-    strong {
-      font-size: 19px;
-    }
-
-    p {
-      font-size: 11px;
-    }
-  }
-}
-
-@media (max-width: 578px) {
-  .destacados {
-    display: grid;
-    grid-template-columns: none;
-    grid-template-rows: auto auto;
-    row-gap: 10px;
-    justify-items: center;
-    padding: 50px 10px;
-  }
-
-  .titulo-index {
-    margin-top: 35px;
-    margin-bottom: 20px;
-    font-family: "Playfair Display", serif;
-    color: #623f23;
-    font-weight: 800;
-    font-size: 35px;
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    line-height: 1;
-  }
-
-  .parrafo-destacados {
-    font-family: "Playfair Display", serif;
-    font-weight: 500;
-    font-size: 11px;
-    padding: 0px 18px;
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    text-align: center;
-    color: #231f20;
-    line-height: 1.9;
-  }
-
-  .carousel-inner {
-    grid-template-columns: 1fr 1fr;
-    justify-items: center;
-  }
-
-  .carousel-item {
-    height: 320px;
-  }
-
-  .carousel-item img {
-    height: 65%;
-    width: 100%;
-    border-radius: 83px;
-    object-fit: cover;
-  }
-
-  .introduccion-sobre-mi {
-    grid-template-columns: 1fr 2fr;
-
-    .foto-introduccion {
-      max-width: 90%;
-      height: 90%;
-    }
-    strong {
-      font-size: 15px;
-    }
-
-    p {
-      font-size: 10px;
-      padding: 0px 10px;
-    }
-  }
-}
-
-/* SECCIÓN GUÍAS */
-
-@media (max-width: 1075px) {
+/* MEDIA QUERIES TAMAÑO CELULAR*/
+@media (max-width: 1269px) {
   .seccion-guias h1 {
-    font-size: 35px;
-  }
-  .seccion-guias p {
-    font-size: 18px;
-  }
-}
-
-@media (max-width: 929px) {
-  .seccion-guias h1 {
-    font-size: 33px;
-  }
-  .seccion-guias p {
-    font-size: 16px;
-  }
-}
-
-@media (max-width: 814px) {
-  .seccion-guias {
-    display: grid;
-    justify-items: center;
-    margin: 0px 30px 0px 30px;
-  }
-  .seccion-guias h1 {
-    font-size: 31px;
-  }
-  .seccion-guias p {
-    font-size: 16px;
-  }
-}
-
-/* SECCION GUIAS MOBILE */
-@media (max-width: 578px) {
-  .seccion-guias h1 {
-    font-size: 27px;
-  }
-  .seccion-guias p {
-    font-size: 15px;
-  }
-}
-
-@media (max-width: 458px) {
-  .seccion-guias h1 {
-    font-size: 19px;
-  }
-  .seccion-guias p {
-    font-size: 14px;
-  }
-}
-
-/* Sección ARMA TU VIAJE */
-
-@media (max-width: 1075px) {
-  .seccion-armar-tu-viaje {
-    p {
-      font-family: "Lato", sans-serif;
-      margin-top: 1rem;
-      margin-left: 7rem;
-      margin-right: 7rem;
-      font-weight: 501;
-      font-size: 16px;
-      font-style: italic;
-      color: #623f23;
-      line-height: 1.5;
-    }
-  }
-}
-
-@media (max-width: 929px) {
-  .seccion-armar-tu-viaje {
-    h1 {
-      font-family: "Lato", sans-serif;
-      margin-top: 4rem;
-      margin-left: 7rem;
-      font-weight: 800;
-      font-size: 27px;
-      font-style: italic;
-      color: #623f23;
-    }
-
-    p {
-      font-family: "Lato", sans-serif;
-      margin-top: 1rem;
-      margin-left: 7rem;
-      margin-right: 7rem;
-      font-weight: 501;
-      font-size: 16px;
-      font-style: italic;
-      color: #623f23;
-      line-height: 1.6;
-    }
-
-    h2 {
-      font-family: "Lato", sans-serif;
-      margin-top: 1rem;
-      margin-left: 7rem;
-      margin-right: 7rem;
-      font-weight: 501;
-      font-size: 18px;
-      font-style: italic;
-      color: #623f23;
-      line-height: 1.5;
-    }
-  }
-
-  .paso-uno {
-    margin-top: 30px;
-    margin-left: 7rem;
     margin-right: 7rem;
-    color: #623f23;
-    font-family: "Lato", sans-serif;
-    line-height: 1.2;
-
-    h3 {
-      font-size: 17px;
-      color: #623f23;
-      font-family: "Lato", sans-serif;
-    }
-
-    p {
-      font-size: 16px;
-      font-style: italic;
-      font-family: "Lato", sans-serif;
-      color: #623f23;
-      margin-top: 10px;
-      line-height: 1.3;
-    }
-    h4 {
-      font-size: 16px;
-      color: #623f23;
-      font-weight: 15px;
-      font-style: italic;
-      font-family: "Lato", sans-serif;
-    }
-    h5 {
-      margin-left: 30px;
-      margin-top: 8px;
-      font-size: 15px;
-    }
-    ul li {
-      font-size: 14px;
-      color: #623f23;
-      font-style: italic;
-      font-family: "Lato", sans-serif;
-      text-indent: -0.3em;
-      margin-top: 1.5px;
-      line-height: 1.3;
-    }
+    font-size: 2rem;
   }
-  #posdata {
-    font-size: 14px;
+  .seccion-guias p {
+    margin-left: 15rem;
+    margin-right: 7rem;
+    font-size: 1rem;
+    max-height: 220px;
   }
 }
-
-@media (max-width: 814px) {
-  .seccion-armar-tu-viaje {
-    h1 {
-      font-family: "Lato", sans-serif;
-      margin-top: 4rem;
-      margin-left: 4rem;
-      margin-right: 4rem;
-      font-weight: 800;
-      font-size: 24px;
-      font-style: italic;
-      color: #623f23;
-    }
-
-    p {
-      font-family: "Lato", sans-serif;
-      margin-top: 1rem;
-      margin-left: 4rem;
-      margin-right: 4rem;
-      font-weight: 501;
-      font-size: 15px;
-      font-style: italic;
-      color: #623f23;
-      line-height: 1.6;
-    }
-
-    h2 {
-      font-family: "Lato", sans-serif;
-      margin-top: 1rem;
-      margin-left: 7rem;
-      margin-right: 7rem;
-      font-weight: 501;
-      font-size: 18px;
-      font-style: italic;
-      color: #623f23;
-      line-height: 1.5;
-    }
+@media (max-width: 1105px) {
+  .seccion-guias h1 {
+    margin-right: 7rem;
+    font-size: 2rem;
   }
-
-  .paso-uno {
-    margin-top: 30px;
-    margin-left: 4rem;
-    margin-right: 4rem;
-    color: #623f23;
-    font-family: "Lato", sans-serif;
-    line-height: 1.2;
-
-    h3 {
-      font-size: 16px;
-      color: #623f23;
-      font-family: "Lato", sans-serif;
-    }
-
-    p {
-      font-size: 15px;
-      font-style: italic;
-      font-family: "Lato", sans-serif;
-      color: #623f23;
-      margin-top: 10px;
-      line-height: 1.3;
-    }
-    h4 {
-      font-size: 16px;
-      color: #623f23;
-      font-weight: 15px;
-      font-style: italic;
-      font-family: "Lato", sans-serif;
-    }
+  .seccion-guias p {
+    margin-left: 8rem;
+    margin-right: 7rem;
+    font-size: 1rem;
+    max-height: 220px;
   }
 }
-
-@media (max-width: 767px) {
-  .seccion-armar-tu-viaje {
-    display: flex;
-    justify-content: center;
+@media (max-width: 847px) {
+  .seccion-guias h1 {
+    margin-right: 1rem;
+    font-size: 2rem;
   }
-}
-
-/* ARMA TU VIAJE MOBILE */
-
-@media (max-width: 686px) {
-  .seccion-armar-tu-viaje {
-    h1 {
-      font-family: "Lato", sans-serif;
-      margin-top: 4rem;
-      font-weight: 800;
-      font-size: 23px;
-      font-style: italic;
-      color: #623f23;
-    }
-
-    p {
-      font-family: "Lato", sans-serif;
-      margin-top: 1rem;
-      margin-left: 4rem;
-      margin-right: 4rem;
-      font-weight: 501;
-      font-size: 14px;
-      font-style: italic;
-      color: #623f23;
-      line-height: 1.6;
-    }
-
-    h2 {
-      font-family: "Lato", sans-serif;
-      margin-top: 1rem;
-      margin-left: 7rem;
-      margin-right: 7rem;
-      font-weight: 501;
-      font-size: 17px;
-      font-style: italic;
-      color: #623f23;
-      line-height: 1.5;
-    }
-  }
-
-  .paso-uno {
-    margin-top: 30px;
-    margin-left: 4rem;
-    margin-right: 4rem;
-    color: #623f23;
-    font-family: "Lato", sans-serif;
-    line-height: 1.2;
-
-    h3 {
-      font-size: 15px;
-      color: #623f23;
-      font-family: "Lato", sans-serif;
-    }
-
-    p {
-      font-size: 14px;
-      font-style: italic;
-      font-family: "Lato", sans-serif;
-      color: #623f23;
-      margin-top: 10px;
-      line-height: 1.3;
-    }
-    h4 {
-      font-size: 15px;
-      color: #623f23;
-      font-weight: 15px;
-      font-style: italic;
-      font-family: "Lato", sans-serif;
-    }
-  }
-}
-
-@media (max-width: 578px) {
-  .seccion-armar-tu-viaje {
-    h1 {
-      font-family: "Lato", sans-serif;
-      margin-top: 4rem;
-      font-weight: 800;
-      font-size: 21px;
-      font-style: italic;
-      color: #623f23;
-    }
-
-    p {
-      font-family: "Lato", sans-serif;
-      margin-top: 1rem;
-      margin-left: 4rem;
-      margin-right: 4rem;
-      font-weight: 501;
-      font-size: 14px;
-      font-style: italic;
-      color: #623f23;
-      line-height: 1.6;
-    }
-
-    h2 {
-      font-family: "Lato", sans-serif;
-      margin-top: 1rem;
-      margin-left: 7rem;
-      margin-right: 7rem;
-      font-weight: 501;
-      font-size: 17px;
-      font-style: italic;
-      color: #623f23;
-      line-height: 1.5;
-    }
-  }
-
-  .paso-uno {
-    margin-top: 30px;
-    margin-left: 4rem;
-    margin-right: 4rem;
-    color: #623f23;
-    font-family: "Lato", sans-serif;
-    line-height: 1.2;
-
-    h3 {
-      font-size: 15px;
-      color: #623f23;
-      font-family: "Lato", sans-serif;
-    }
-
-    p {
-      font-size: 14px;
-      font-style: italic;
-      font-family: "Lato", sans-serif;
-      color: #623f23;
-      margin-top: 10px;
-      line-height: 1.3;
-    }
-    h4 {
-      font-size: 15px;
-      color: #623f23;
-      font-weight: 15px;
-      font-style: italic;
-      font-family: "Lato", sans-serif;
-    }
-  }
-}
-
-/* SECCION SOBRE MI */
-
-@media (max-width: 929px) {
-  .presentacion {
-    margin-bottom: 50px;
-    margin-right: 60px;
-    margin-left: 60px;
-    font-family: "Playfair Display", serif;
-    color: #231f20;
-    font-weight: 400;
-    text-align: center;
-    font-size: 18px;
-    line-height: 1.9;
-  }
-  #nombre {
-    font-weight: 600;
-    color: #231f20;
-    font-family: "Playfair Display", serif;
-    font-size: 18px;
-    text-shadow: 0 0 12px #231f2075;
-  }
-}
-@media (max-width: 768px) {
-  .bienvenida {
-    font-family: "Playfair Display", serif;
-    font-weight: 800;
-    color: #623f23;
-    margin-top: 50px;
-    margin-bottom: 29px;
-    text-align: center;
-  }
-  .presentacion {
-    margin-bottom: 50px;
-    margin-right: 30px;
-    margin-left: 30px;
-    font-family: "Playfair Display", serif;
-    color: #231f20;
-    font-weight: 400;
-    text-align: center;
-    font-size: 18px;
-    line-height: 1.9;
-  }
-  #nombre {
-    font-weight: 600;
-    color: #231f20;
-    font-family: "Playfair Display", serif;
-    font-size: 18px;
-    text-shadow: 0 0 12px #231f2075;
-  }
-}
-
-/* SOBRE MI MOBILE */
-
-@media (max-width: 686px) {
-  .bienvenida {
-    font-family: "Playfair Display", serif;
-    font-weight: 800;
-    color: #623f23;
-    margin-top: 50px;
-    margin-bottom: 29px;
-    text-align: center;
-    font-size: 30px;
-  }
-  .presentacion {
-    margin-bottom: 50px;
-    margin-right: 30px;
-    margin-left: 30px;
-    font-family: "Playfair Display", serif;
-    color: #231f20;
-    font-weight: 400;
-    text-align: center;
-    font-size: 18px;
-    line-height: 1.9;
-  }
-  #nombre {
-    font-weight: 600;
-    color: #231f20;
-    font-family: "Playfair Display", serif;
-    font-size: 18px;
-    text-shadow: none;
-  }
-}
-
-@media (max-width: 578px) {
-  .presentacion {
-    margin-bottom: 50px;
-    margin-right: 30px;
-    margin-left: 30px;
-    font-family: "Playfair Display", serif;
-    color: #231f20;
-    font-weight: 500;
-    text-align: center;
-    font-size: 20px;
-    line-height: 1.9;
-  }
-  #nombre {
-    font-weight: 600;
-    color: #231f20;
-    font-family: "Playfair Display", serif;
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 458px) {
-  .presentacion {
-    margin-bottom: 50px;
-    margin-right: 30px;
-    margin-left: 30px;
-    font-family: "Playfair Display", serif;
-    color: #231f20;
-    font-weight: 500;
-    text-align: center;
-    font-size: 22px;
-    line-height: 1.9;
-    letter-spacing: 0.2px;
-  }
-}
-
-@media (max-width: 350px) {
-  .presentacion {
-    margin-bottom: 50px;
-    margin-right: 30px;
-    margin-left: 30px;
-    font-family: "Playfair Display", serif;
-    color: #231f20;
-    font-weight: 500;
-    text-align: center;
-    font-size: 24px;
-    line-height: 1.9;
-    letter-spacing: 0.5px;
+  .seccion-guias p {
+    margin-left: 3rem;
+    margin-right: 1rem;
+    font-size: 1rem;
+    max-height: 220px;
   }
 }
