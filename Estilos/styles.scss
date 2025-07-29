@@ -223,7 +223,7 @@ footer {
   font-weight: 400;
   font-style: italic;
   text-align: center;
-  font-size: medium;
+  font-size: 20px;
   line-height: 1.9;
 }
 
@@ -1228,6 +1228,8 @@ textarea {
   }
 }
 
+/* ARMA TU VIAJE MOBILE */
+
 @media (max-width: 686px) {
   .seccion-armar-tu-viaje {
     h1 {
@@ -1362,4 +1364,9 @@ textarea {
       font-family: "Lato", sans-serif;
     }
   }
+}
+
+/* SECCION SOBRE MI */
+
+@media (max-width: 1075px) {
 }
