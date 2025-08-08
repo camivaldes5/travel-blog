@@ -598,7 +598,10 @@ textarea {
 .copy {
   font-family: "Merriweather", sans-serif;
   color: #231f20;
-  font-size: 4px;
+  font-size: 8px;
+  position: relative;
+  bottom: 8px;
+  text-align: end;
 }
 
 @media (max-width: 768px) {
