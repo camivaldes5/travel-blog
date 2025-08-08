@@ -644,6 +644,12 @@ textarea {
   }
 }
 
+.copy {
+  font-family: "Merriweather", sans-serif;
+  color: #231f20;
+  font-size: 4px;
+}
+
 @media (max-width: 768px) {
   .footer {
     flex-direction: column;
