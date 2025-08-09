@@ -344,13 +344,12 @@ textarea {
 .seccion-guias {
   display: grid;
   justify-items: center;
-  margin: 0px 60px 0px 60px;
+  margin: 50px 60px 50px 60px;
 }
 
 .seccion-guias h1 {
   display: grid;
   font-family: "Playfair Display", serif;
-  margin-top: 4rem;
   font-weight: 780;
   font-size: 35px;
   color: #623f23;
@@ -365,46 +364,45 @@ textarea {
   text-align: center;
 }
 
-.desplegable-guias {
-  margin-top: 40px;
-  margin-bottom: 80px;
+.section__guias {
+  padding: 100px 0;
+  background-color: #a9c8c3;
+  position: relative;
 }
-
-.accordion-item .accordion-header .accordion-button {
+.section__guias::before {
+  content: "";
+  display: block;
+  height: 240px;
+  background: url("/Imagenes/Borde Rasgado.png") no-repeat center;
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.section__guias .div__guias {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  justify-items: center;
+}
+.section__guias .div__tarjeta {
+  display: grid;
+  justify-items: center;
+  transition: transform 0.3s ease;
+}
+.section__guias .div__tarjeta:hover {
+  transform: scale(1.03);
+}
+.section__guias img {
+  margin: 12px 0px;
+  width: 73%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  object-fit: cover;
+}
+.section__guias h2 {
   font-family: "Playfair Display", serif;
-  color: #623f23;
-  font-size: 18px;
-  font-weight: 400 !important;
-}
-
-.accordion-button:not(.collapsed) {
-  background-color: rgba(216, 240, 228, 0.662745098) !important;
-  border: none;
-}
-
-.titulo-guias ul {
-  margin-top: 40px;
-  margin-bottom: 30px;
-  margin-right: 120px;
-  margin-left: 100px;
-  border-radius: 30px;
-  border-color: #623f23;
-  border-style: groove;
-}
-
-.titulo-guias ul li {
-  margin-top: 20px;
-  margin-bottom: 30px;
-  margin-right: 120px;
-  margin-left: 60px;
-}
-
-.titulo-guias ul li a {
-  font-family: "Playfair Display", serif;
-  font-weight: 700;
-  font-size: 2rem;
-  color: #623f23;
-  text-decoration: none;
+  font-size: 20px;
+  color: #231f20;
 }
 
 /* ARMA TU VIAJE */
