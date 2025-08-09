@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/Estilos/estilos.css" />
+    <meta
+      name="description"
+      content="Explorá nuestras guías de viaje con rutas, consejos y recomendaciones para que tu próxima aventura sea única y sin complicaciones."
+    />
+    <meta name="keywords" content="" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -23,7 +27,8 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="../Estilos/estilos.css" />
-    <title>ModoViajero</title>
+    <link rel="icon" href="./Imagenes/logo-icon.png" />
+    <title>ModoViajero - Guías</title>
   </head>
   <body class="layout">
     <header>
@@ -122,7 +127,7 @@
     </header>
     <main>
       <section class="seccion-guias">
-        <h1 class="h1__guias">¡Todas las guías en un solor lugar!</h1>
+        <h1 class="h1__guias">¡Todas las guías de viajes en un solor lugar!</h1>
         <p class="p__guias">
           En esta sección vas a encontrar recomendaciones, datos útiles y
           combinaciones de destinos pensadas para inspirarte y ayudarte a
@@ -136,116 +141,49 @@
           las consultes todas las veces que quieras💫
         </p>
       </section>
-      <section class="desplegable-guias d-flex justify-content-center">
-        <div
-          class="accordion w-100"
-          style="max-width: 1000px"
-          id="accordionExample"
-        >
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button
-                class="accordion-button accordion-color"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseOne"
-                aria-expanded="false"
-                aria-controls="collapseOne"
-              >
-                Italia
-              </button>
-            </h2>
-            <div
-              id="collapseOne"
-              class="accordion-collapse collapse show"
-              data-bs-parent="#accordionExample"
-            >
-              <div class="accordion-body"></div>
-            </div>
+      <section class="section__guias">
+        <div class="div__guias">
+          <div class="div__tarjeta">
+            <img
+              src="https://media.istockphoto.com/id/508451794/photo/cibeles-fountain-at-plaza-de-cibeles-in-madrid.jpg?s=1024x1024&w=is&k=20&c=8Ep2n5XFF_bShNoiihGWZkZMXozkg4BoFzVtnxopFTw="
+              alt="España"
+            />
+            <h2>Visita Londres en 5 días</h2>
           </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseTwo"
-                aria-expanded="false"
-                aria-controls="collapseTwo"
-              >
-                Francia
-              </button>
-            </h2>
-            <div
-              id="collapseTwo"
-              class="accordion-collapse collapse"
-              data-bs-parent="#accordionExample"
-            >
-              <div class="accordion-body"></div>
-            </div>
+          <div class="div__tarjeta">
+            <img
+              src="https://media.istockphoto.com/id/539115110/photo/colosseum-in-rome-and-morning-sun-italy.jpg?s=1024x1024&w=is&k=20&c=VzsI_-yWmldqLzFoRpfRCGsx5RkIEytRIVEFZ5Am01E="
+              alt="Italia"
+            />
+            <h2>Costa Amalfitana en 4 días</h2>
           </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseThree"
-                aria-expanded="false"
-                aria-controls="collapseThree"
-              >
-                España
-              </button>
-            </h2>
-            <div
-              id="collapseThree"
-              class="accordion-collapse collapse"
-              data-bs-parent="#accordionExample"
-            >
-              <div class="accordion-body"></div>
-            </div>
+          <div class="div__tarjeta">
+            <img
+              src="https://media.istockphoto.com/id/2052531938/photo/scenic-panorama-of-eiffel-tower-seine-river-and-pont-dlena-in-paris-france.jpg?s=1024x1024&w=is&k=20&c=A2dJrg-Wnue7apbk_3P1EeXR5en0r9Mn5d9UVZmfbQM="
+              alt="Francia"
+            />
+            <h2>Visita la Costa Mediterránea en 5 días</h2>
           </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseFour"
-                aria-expanded="false"
-                aria-controls="collapseFour"
-              >
-                Alemania
-              </button>
-            </h2>
-            <div
-              id="collapseFour"
-              class="accordion-collapse collapse"
-              data-bs-parent="#accordionExample"
-            >
-              <div class="accordion-body"></div>
-            </div>
+          <div class="div__tarjeta">
+            <img
+              src="https://media.istockphoto.com/id/840639700/photo/amsterdam-cityscape-view.jpg?s=1024x1024&w=is&k=20&c=ZwJfObDvls6FaO8qZ3nU0SMCIT5Wox4veefT-AyyrWA="
+              alt="Países Bajos"
+            />
+            <h2>Visita Londres en 5 días</h2>
           </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseFive"
-                aria-expanded="false"
-                aria-controls="collapseFive"
-              >
-                Inglaterra
-              </button>
-            </h2>
-            <div
-              id="collapseFive"
-              class="accordion-collapse collapse"
-              data-bs-parent="#accordionExample"
-            >
-              <div class="accordion-body"></div>
-            </div>
+          <div class="div__tarjeta">
+            <img
+              src="https://media.istockphoto.com/id/1127624322/photo/valley-of-lake-lungern-or-lungerersee-in-obwalden-switzerland.jpg?s=1024x1024&w=is&k=20&c=mK3xCbExCCmXTjNxFlVGW4sT02EM0n_nN8STJsYRGIY="
+              alt="Suiza"
+            />
+            <h2>Recorre la Costa Oeste en una semana</h2>
+          </div>
+          <div class="div__tarjeta">
+            <img
+              src="https://media.istockphoto.com/id/547499548/photo/big-ben-and-westminster-bridge-at-sunset.jpg?s=1024x1024&w=is&k=20&c=UG_qPx4ibwcKrrJCaybk_6ayyeVF5w9DIxDhRM_R990="
+              alt="Londres"
+            />
+            <h2>Conoce Nueva York en 6 días</h2>
           </div>
         </div>
       </section>
@@ -263,8 +201,13 @@
       </div>
       <div id="logo-footer">
         <img src="../Imagenes/logo - Editada.png" alt="Modo Viajero" />
+        <p class="copy">&copy derechos reservados | Camila Valdés</p>
       </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.x/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZ4CykXT4g1L5vvk2z4kE/g6wG6z0ZQ5ZW7CM"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
