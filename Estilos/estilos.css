@@ -165,23 +165,30 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0px 20px 0px 20px;
+  height: 100%;
+  background: linear-gradient(to bottom, #f7f8ea 10%, #a9c8c3 90%);
+  margin: 85px 0px 0px 0px;
+}
+
+.div__bienvenida {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 25px;
 }
 
 .bienvenida {
   font-family: "Playfair Display", serif;
   font-weight: 800;
   color: #623f23;
-  font-size: 35px;
-  margin-top: 88px;
-  margin-bottom: 29px;
+  font-size: 32px;
+  margin-bottom: 20px;
   text-align: center;
 }
 
 .presentacion {
-  margin-bottom: 50px;
-  margin-right: 100px;
-  margin-left: 100px;
+  margin: 0px 100px 50px 100px;
   font-family: "Playfair Display", serif;
   color: #231f20;
   font-weight: 400;
@@ -198,20 +205,24 @@ footer {
   text-shadow: 0 0 12px rgba(35, 31, 32, 0.4196078431);
 }
 
-.formulario {
+.section__formulario {
+  height: 400px;
   display: grid;
-  grid-template-areas: "label input" "label input";
-  margin: 2rem auto;
+  place-items: center;
+  background: url(../Imagenes/playa.avif) center/cover no-repeat;
+  background-position: 50% 42%;
+}
+
+.formulario {
   height: 540px;
   width: 650px;
-  background-color: rgba(74, 143, 110, 0.3960784314);
   border-radius: 20px;
-  font-family: "Merriweather", sans-serif;
-  font-style: normal;
-  font-size: 15px;
+  font-family: "Playfair Display", serif;
   font-weight: 900;
-  border: #623f23;
-  box-shadow: 4px 4px 15px #4a8f6e;
+  background-color: rgba(247, 248, 234, 0.7882352941);
+  transform: scale(0.6);
+  position: relative;
+  bottom: 70px;
 }
 
 .form__form {
@@ -219,6 +230,7 @@ footer {
 }
 
 .campo-form {
+  grid-area: campos;
   margin-bottom: 15px;
   margin-left: 50px;
 }
@@ -226,9 +238,10 @@ footer {
 .campo-form label {
   display: inline-block;
   width: 150px;
-  color: #623f23;
+  color: #231f20;
   margin-right: 76px;
   margin-left: 20px;
+  font-size: 18px;
 }
 
 #texto__mensaje {
@@ -237,7 +250,6 @@ footer {
 }
 
 #mensaje {
-  border-radius: 20px;
   outline: none;
   padding-left: 10px;
   height: 120px;
@@ -255,19 +267,22 @@ textarea {
   width: 300px;
   padding: 5px;
   margin-top: 20px;
-  border: 1px solid #623f23;
-  border-radius: 15px;
+  border: 1px solid #231f20;
 }
 
 .boton button {
-  margin-top: 12px;
-  margin-left: 464px;
-  background-color: rgba(74, 143, 110, 0.6901960784);
-  border-color: rgba(98, 63, 35, 0.8274509804);
-  border-radius: 15px;
-  border-style: bold;
-  height: 40px;
-  width: 87px;
+  display: grid;
+  background-color: #a9c8c3;
+  border-color: #231f20;
+  font-family: "Playfair Display", serif;
+  font-size: 19px;
+  height: 35px;
+  width: 110px;
+  justify-self: end;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  right: 60px;
 }
 
 /* DESTINOS */
@@ -403,7 +418,7 @@ textarea {
 }
 
 /* ARMA TU VIAJE */
-.fondo-degrade, .fondo-degrade-guias {
+.fondo-degrade, .section__sobremi, .fondo-degrade-guias {
   background: linear-gradient(to bottom, #f7f8ea 32%, #a9c8c3 100%);
 }
 
@@ -574,8 +589,7 @@ textarea {
 }
 
 .mi-foto {
-  height: 20%;
-  width: 20%;
+  width: 35%;
   border-radius: 50%;
   border-style: solid;
   border-color: #623f23;
