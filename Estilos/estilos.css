@@ -172,6 +172,7 @@ footer {
   font-family: "Playfair Display", serif;
   font-weight: 800;
   color: #623f23;
+  font-size: 35px;
   margin-top: 88px;
   margin-bottom: 29px;
   text-align: center;
@@ -341,23 +342,29 @@ textarea {
 }
 
 /* GUÍAS */
+.fondo-degrade-guias {
+  background: linear-gradient(to bottom, #f7f8ea 30%, #a9c8c3 55%);
+}
+
 .seccion-guias {
   display: grid;
   justify-items: center;
-  margin: 50px 60px 50px 60px;
+  margin: 85px 0px;
 }
 
 .seccion-guias h1 {
   display: grid;
   font-family: "Playfair Display", serif;
   font-weight: 780;
-  font-size: 35px;
+  font-size: 32px;
   color: #623f23;
 }
 
 .seccion-guias p {
   font-family: "Playfair Display", serif;
   margin-top: 1rem;
+  margin-left: 7rem;
+  margin-right: 7rem;
   font-weight: 400;
   font-size: 18px;
   color: #231f20;
@@ -366,16 +373,6 @@ textarea {
 
 .section__guias {
   padding: 100px 0;
-  background-color: #a9c8c3;
-  position: relative;
-}
-.section__guias::before {
-  content: "";
-  display: block;
-  height: 240px;
-  background: url("/Imagenes/Borde Rasgado.png") no-repeat center;
-  background-size: cover;
-  transform: rotate(180deg);
 }
 .section__guias .div__guias {
   display: grid;
@@ -406,41 +403,85 @@ textarea {
 }
 
 /* ARMA TU VIAJE */
+.fondo-degrade, .fondo-degrade-guias {
+  background: linear-gradient(to bottom, #f7f8ea 32%, #a9c8c3 100%);
+}
+
+.seccion-armar-tu-viaje {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  margin: 85px 0px;
+}
 .seccion-armar-tu-viaje h1 {
-  font-family: "Lato", sans-serif;
-  margin-top: 4rem;
-  margin-left: 7rem;
-  margin-right: 3rem;
+  font-family: "Playfair Display", serif;
   font-weight: 800;
   font-size: 32px;
-  font-style: italic;
   color: #623f23;
 }
 
 .seccion-armar-tu-viaje p {
-  font-family: "Lato", sans-serif;
+  font-family: "Playfair Display", serif;
   margin-top: 1rem;
   margin-left: 7rem;
   margin-right: 7rem;
-  font-weight: 501;
+  font-weight: 400;
   font-size: 18px;
-  font-style: italic;
-  color: #623f23;
+  color: #231f20;
   line-height: 1.5;
+  justify-content: center;
 }
 
 .seccion-armar-tu-viaje h2 {
-  font-family: "Lato", sans-serif;
+  font-family: "Playfair Display", serif;
   margin-top: 1rem;
   margin-left: 7rem;
   margin-right: 7rem;
   font-weight: 501;
   font-size: 18px;
-  font-style: italic;
   color: #623f23;
   line-height: 1.5;
 }
 
+.section__cards {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 60px 0px;
+}
+.section__cards .div__cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-items: stretch;
+  align-items: stretch;
+  transform: scale(0.9);
+}
+.section__cards .card {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+.section__cards .card:hover {
+  transform: scale(1.05);
+}
+.section__cards .card .btn-primary {
+  background-color: rgba(143, 87, 41, 0.76);
+  border-color: #623f23;
+  box-shadow: 0 0px 5px #623f23;
+  border-width: inherit;
+}
+.section__cards .card .btn-primary:active {
+  background-color: #623f23;
+  border-color: rgb(78, 51, 29);
+  box-shadow: 0 0px 5px #623f23;
+}
+
+/* Artiulo 1 */
 .paso-uno {
   margin-top: 30px;
   margin-left: 7rem;
