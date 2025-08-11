@@ -197,14 +197,14 @@ footer {
 /* SOBRE MI */
 
 .section__sobremi {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  @extend .fondo-degrade;
-  background: linear-gradient(to bottom, #f7f8ea 10%, #a9c8c3 90%);
-  margin: 85px 0px 0px 0px;
+  .section__bienvenida {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @extend .fondo-degrade;
+    background: linear-gradient(to bottom, #f7f8ea 10%, #a9c8c3 90%);
+    margin: 85px 0px 0px 0px;
+  }
 }
 
 .div__bienvenida {
@@ -225,7 +225,7 @@ footer {
 }
 
 .presentacion {
-  margin: 0px 100px 50px 100px;
+  margin: 0px 100px 0px 100px;
   font-family: "Playfair Display", serif;
   color: #231f20;
   font-weight: 400;
@@ -242,14 +242,6 @@ footer {
   text-shadow: 0 0 12px #231f206b;
 }
 
-.section__formulario {
-  height: 400px;
-  display: grid;
-  place-items: center;
-  background: url(../Imagenes/playa.avif) center / cover no-repeat;
-  background-position: 50% 42%;
-}
-
 .formulario {
   height: 540px;
   width: 650px;
@@ -257,9 +249,7 @@ footer {
   font-family: "Playfair Display", serif;
   font-weight: 900;
   background-color: #f7f8eac9;
-  transform: scale(0.6);
-  position: relative;
-  bottom: 70px;
+  transform: scale(0.8);
 }
 
 .form__form {
@@ -270,12 +260,13 @@ footer {
   grid-area: campos;
   margin-bottom: 15px;
   margin-left: 50px;
+  border-radius: 6px;
 }
 
 .campo-form label {
   display: inline-block;
   width: 150px;
-  color: #231f20;
+  color: #623f23;
   margin-right: 76px;
   margin-left: 20px;
   font-size: 18px;
@@ -290,6 +281,7 @@ footer {
   outline: none;
   padding-left: 10px;
   height: 120px;
+  border-radius: 6px;
 }
 
 .campo-form input {
@@ -297,6 +289,7 @@ footer {
   outline: none;
   padding-left: 10px;
   text-align: center;
+  border-radius: 6px;
 }
 
 input,
@@ -304,15 +297,19 @@ textarea {
   width: 300px;
   padding: 5px;
   margin-top: 20px;
-  border: 1px solid #231f20;
+  border: 1px solid #623f23;
 }
 
 .boton button {
   display: grid;
   background-color: #a9c8c3;
-  border-color: #231f20;
+  border-style: inherit;
+  color: #623f23;
+  border-radius: 6px;
+  box-shadow: 0 0px 10px #623f23;
+  font-size: 18px;
+  font-weight: 600;
   font-family: "Playfair Display", serif;
-  font-size: 19px;
   height: 35px;
   width: 110px;
   justify-self: end;
