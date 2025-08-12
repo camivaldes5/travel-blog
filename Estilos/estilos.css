@@ -397,13 +397,12 @@ footer {
 
 .seccion-guias p {
   font-family: "Playfair Display", serif;
-  margin-top: 1rem;
-  margin-left: 7rem;
-  margin-right: 7rem;
+  margin: 22px 120px 0px 120px;
   font-weight: 400;
   font-size: 18px;
   color: #231f20;
   text-align: center;
+  line-height: 1.9;
 }
 
 .section__guias {
@@ -457,14 +456,12 @@ footer {
 
 .seccion-armar-tu-viaje p {
   font-family: "Playfair Display", serif;
-  margin-top: 1rem;
-  margin-left: 7rem;
-  margin-right: 7rem;
+  margin: 22px 120px 0px 120px;
   font-weight: 400;
   font-size: 18px;
   color: #231f20;
-  line-height: 1.5;
   justify-content: center;
+  line-height: 1.9;
 }
 
 .seccion-armar-tu-viaje h2 {
