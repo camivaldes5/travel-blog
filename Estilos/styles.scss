@@ -166,34 +166,6 @@ footer {
   }
 }
 
-// .texto-superpuesto {
-//   position: absolute;
-//   top: 52%;
-//   left: 30%;
-//   transform: translate(-50%, -50%);
-//   color: rgba(240, 248, 255, 0.801);
-//   font-family: "Lato", sans-serif;
-//   font-style: italic;
-//   font-weight: 400;
-//   font-size: 1.7rem;
-//   opacity: 0; /* 🔒 Oculto al inicio */
-//   transition: opacity 0.3s ease;
-//   pointer-events: none; /* evita que el texto bloquee el hover */
-//   text-align: center;
-//   z-index: 1;
-// }
-
-// .contenedor-imagen:hover .texto-superpuesto {
-//   opacity: 1;
-// }
-
-// .contenedor-imagen:hover .img-destacados {
-//   filter: brightness(30%);
-//   height: 190px;
-//   width: 330px;
-//   text-shadow: 0 0 8px #231f20;
-// }
-
 /* SOBRE MI */
 
 .section__sobremi {
@@ -395,6 +367,40 @@ footer {
   object-position: center 42% !important;
 }
 
+.lista-destinos {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+
+  .destino {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+
+    &:hover {
+      filter: brightness(30%);
+      text-shadow: 0 0 8px #231f20;
+    }
+  }
+
+  figcaption {
+    position: absolute;
+    inset: auto 0 0 0; /* pega al borde inferior */
+    padding: 10px 12px;
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+    overflow: hidden;
+  }
+}
+
 .titulo-separador {
   align-items: center;
   text-align: center;
@@ -452,38 +458,8 @@ footer {
   line-height: 1.9;
 }
 
-.section__guias {
-  padding: 100px 0;
-
-  .div__guias {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    justify-items: center;
-  }
-
-  .div__tarjeta {
-    display: grid;
-    justify-items: center;
-    transition: transform 0.3s ease;
-    &:hover {
-      transform: scale(1.03);
-    }
-  }
-  img {
-    margin: 12px 0px;
-    width: 73%;
-    height: auto;
-    border-radius: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    object-fit: cover;
-  }
-
-  h2 {
-    font-family: "Playfair Display", serif;
-    font-size: 20px;
-    color: #231f20;
-  }
+.card-guias {
+  height: 23rem !important;
 }
 
 /* ARMA TU VIAJE */
@@ -518,9 +494,7 @@ footer {
 
 .seccion-armar-tu-viaje h2 {
   font-family: "Playfair Display", serif;
-  margin-top: 1rem;
-  margin-left: 7rem;
-  margin-right: 7rem;
+  margin: 22px 120px 0px 120px;
   font-weight: 501;
   font-size: 18px;
   color: #623f23;
@@ -530,29 +504,23 @@ footer {
 .section__cards {
   display: grid;
   justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
-  gap: 20px;
   margin: 60px 0px;
 
   .div__cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-    justify-items: stretch;
-    align-items: stretch;
-    transform: scale(0.9);
   }
 
   .card {
-    width: 100%;
-    height: 100%;
     border-radius: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
+    width: 17rem;
+    height: 26rem;
 
     &:hover {
-      transform: scale(1.05);
+      transform: translateY(-6px);
     }
 
     .btn-primary {
@@ -568,6 +536,18 @@ footer {
       }
     }
   }
+}
+
+.card1-boton,
+.card2-boton,
+.card3-boton {
+  position: relative;
+  top: 23px;
+}
+
+.card-boton4 {
+  position: relative;
+  top: 2px;
 }
 
 /* Artiulo 1 */
